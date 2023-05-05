@@ -70,11 +70,11 @@ Public Class SAPGLAccount
                             Else
                                 oACCOUNT_COA.SetValue(aTStrRec.Fieldname, aTStrRec.formated())
                             End If
-                            oACCOUNT_COA.SetValue("ACTION", "I")
+                                ' oACCOUNT_COA.SetValue("ACTION", "I")
                         Case "ACCOUNT_NAMES"
                             If Not oACCOUNT_NAMESAppended Then
                                 oACCOUNT_NAMES.Append()
-                                oACCOUNT_NAMES.SetValue("ACTION", "I")
+                                ' oACCOUNT_NAMES.SetValue("ACTION", "I")
                                 oACCOUNT_NAMESAppended = True
                             End If
                             ' these are nested structured so we need to get the structure from the row/structure
@@ -88,7 +88,7 @@ Public Class SAPGLAccount
                         Case "ACCOUNT_KEYWORDS"
                             If Not oACCOUNT_KEYWORDSAppended Then
                                 oACCOUNT_KEYWORDS.Append()
-                                oACCOUNT_KEYWORDS.SetValue("ACTION", "I")
+                                ' oACCOUNT_KEYWORDS.SetValue("ACTION", "I")
                                 oACCOUNT_KEYWORDSAppended = True
                             End If
                             ' these are nested structured so we need to get the structure from the row/structure
@@ -102,7 +102,7 @@ Public Class SAPGLAccount
                         Case "ACCOUNT_CCODES"
                             If Not oACCOUNT_CCODESAppended Then
                                 oACCOUNT_CCODES.Append()
-                                oACCOUNT_CCODES.SetValue("ACTION", "I")
+                                ' oACCOUNT_CCODES.SetValue("ACTION", "I")
                                 oACCOUNT_CCODESAppended = True
                             End If
                             ' these are nested structured so we need to get the structure from the row/structure
