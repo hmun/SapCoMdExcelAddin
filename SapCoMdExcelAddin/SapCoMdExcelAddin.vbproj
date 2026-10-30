@@ -378,7 +378,7 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>BFFC88C79710D75CD33A0B63DCCDCE4A5AFF7245</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3684BB3E87F345D0A2FDC66FD9BB409E11568ED2</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
