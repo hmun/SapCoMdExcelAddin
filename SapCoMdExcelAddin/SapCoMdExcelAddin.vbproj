@@ -36,7 +36,7 @@
     <PublishUrl>T:\hmun\VbaGit_64\SapCoMdExcelAddin\x86\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.4</ApplicationVersion>
+    <ApplicationVersion>1.0.0.5</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -239,6 +239,8 @@
   -->
   <ItemGroup>
     <AppDesigner Include="My Project\" />
+    <Compile Include="SAPActivityType.vb" />
+    <Compile Include="SapCoMdRibbonAT.vb" />
     <Compile Include="SapCoMdRibbonCC.vb" />
     <Compile Include="SapCoMdRibbonCE.vb" />
     <Compile Include="SapCoMdRibbonGLAccount.vb" />
@@ -276,7 +278,9 @@
     </Compile>
     <Compile Include="SAPWbsElement.vb" />
     <Compile Include="TData.vb" />
+    <Compile Include="TDataDic.vb" />
     <Compile Include="TDataRec.vb" />
+    <Compile Include="TSAP_ATData.vb" />
     <Compile Include="TSAP_CCData.vb" />
     <Compile Include="TSAP_CEData.vb" />
     <Compile Include="TSAP_GL_ACCData.vb" />
@@ -374,7 +378,7 @@
     </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>5F76AF419AD2A8F9976728B49A6C32C0D90E2021</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>BFFC88C79710D75CD33A0B63DCCDCE4A5AFF7245</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>

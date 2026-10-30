@@ -79,9 +79,9 @@ Public Class SapCoMdRibbonCE
         End If
         Dim aCoArea As String = aPar.value("", "COAREA")
         Dim aLanguage As String = aPar.value("LANGUAGE", "LANGU")
-        Dim aCeClass As String = aPar.value("", "COSTELEMCLASS")
+        Dim aCEClass As String = aPar.value("", "COSTELEMCLASS")
         Dim aTest As Boolean = If(aPar.value("", "TESTRUN") = "X", True, False)
-        If String.IsNullOrEmpty(aCoArea) Or String.IsNullOrEmpty(aLanguage) Or String.IsNullOrEmpty(aCeClass) Then
+        If String.IsNullOrEmpty(aCoArea) Or String.IsNullOrEmpty(aLanguage) Or String.IsNullOrEmpty(aCEClass) Then
             MsgBox("Please fill all obligatory fields in the parameter sheet!", MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Sap CO Md")
             Exit Sub
         End If

@@ -66,6 +66,16 @@
         Next
     End Sub
 
+    Public Function getColumn(pClmn As String) As SAPCommon.TStrRec
+        Dim aTStrRec As SAPCommon.TStrRec
+        If aTDataRecCol.Contains(pClmn) Then
+            aTStrRec = aTDataRecCol(pClmn)
+            getColumn = aTStrRec
+        Else
+            getColumn = Nothing
+        End If
+    End Function
+
     Public Function getPost(ByRef pPar As SAPCommon.TStr) As String
         Dim aClmn As String = If(pPar.value("COL", "DATAPOST") <> "", pPar.value("COL", "DATAPOST"), "INT-POST")
         Dim aTStrRec As SAPCommon.TStrRec
@@ -118,4 +128,19 @@
         End If
     End Function
 
+    Public Sub toRange(pFields() As String, pIsValue() As String, ByRef aRange As Excel.Range)
+        Dim aTStrRec As SAPCommon.TStrRec
+        For i = 0 To pFields.Count - 1
+            If aTDataRecCol.Contains(pFields(i)) Then
+                aTStrRec = aTDataRecCol(pFields(i))
+                If pIsValue(i) = "X" Then
+                    aRange(1, i + 1).Value = CDbl(aTStrRec.formated())
+                Else
+                    aRange(1, i + 1).Value = CStr(aTStrRec.formated())
+                End If
+            End If
+        Next
+    End Sub
+
 End Class
+

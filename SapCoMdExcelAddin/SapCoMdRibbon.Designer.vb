@@ -44,6 +44,8 @@
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SapCoMdRibbon))
         Me.SapCoMd = Me.Factory.CreateRibbonTab
         Me.SAPCostElement = Me.Factory.CreateRibbonGroup
+        Me.ButtonCECreate = Me.Factory.CreateRibbonButton
+        Me.ButtonCEChange = Me.Factory.CreateRibbonButton
         Me.SAPActivityType = Me.Factory.CreateRibbonGroup
         Me.SAPCostCenter = Me.Factory.CreateRibbonGroup
         Me.ButtonCCCreate = Me.Factory.CreateRibbonButton
@@ -55,10 +57,11 @@
         Me.SapCoMdLogon = Me.Factory.CreateRibbonGroup
         Me.ButtonLogon = Me.Factory.CreateRibbonButton
         Me.ButtonLogoff = Me.Factory.CreateRibbonButton
-        Me.ButtonCECreate = Me.Factory.CreateRibbonButton
-        Me.ButtonCEChange = Me.Factory.CreateRibbonButton
+        Me.ButtonATCreate = Me.Factory.CreateRibbonButton
+        Me.ButtonATChange = Me.Factory.CreateRibbonButton
         Me.SapCoMd.SuspendLayout()
         Me.SAPCostElement.SuspendLayout()
+        Me.SAPActivityType.SuspendLayout()
         Me.SAPCostCenter.SuspendLayout()
         Me.SAPGLAccount.SuspendLayout()
         Me.SapCoMdLogon.SuspendLayout()
@@ -83,8 +86,26 @@
         Me.SAPCostElement.Label = "CO Cost Element"
         Me.SAPCostElement.Name = "SAPCostElement"
         '
+        'ButtonCECreate
+        '
+        Me.ButtonCECreate.Image = CType(resources.GetObject("ButtonCECreate.Image"), System.Drawing.Image)
+        Me.ButtonCECreate.Label = "Create CE"
+        Me.ButtonCECreate.Name = "ButtonCECreate"
+        Me.ButtonCECreate.ScreenTip = "Create Cost Centers"
+        Me.ButtonCECreate.ShowImage = True
+        '
+        'ButtonCEChange
+        '
+        Me.ButtonCEChange.Image = CType(resources.GetObject("ButtonCEChange.Image"), System.Drawing.Image)
+        Me.ButtonCEChange.Label = "Change CE"
+        Me.ButtonCEChange.Name = "ButtonCEChange"
+        Me.ButtonCEChange.ScreenTip = "Change Cost Element"
+        Me.ButtonCEChange.ShowImage = True
+        '
         'SAPActivityType
         '
+        Me.SAPActivityType.Items.Add(Me.ButtonATCreate)
+        Me.SAPActivityType.Items.Add(Me.ButtonATChange)
         Me.SAPActivityType.Label = "CO Activity Type"
         Me.SAPActivityType.Name = "SAPActivityType"
         '
@@ -156,21 +177,21 @@
         Me.ButtonLogoff.Name = "ButtonLogoff"
         Me.ButtonLogoff.ShowImage = True
         '
-        'ButtonCECreate
+        'ButtonATCreate
         '
-        Me.ButtonCECreate.Image = CType(resources.GetObject("ButtonCECreate.Image"), System.Drawing.Image)
-        Me.ButtonCECreate.Label = "Create CE"
-        Me.ButtonCECreate.Name = "ButtonCECreate"
-        Me.ButtonCECreate.ScreenTip = "Create Cost Centers"
-        Me.ButtonCECreate.ShowImage = True
+        Me.ButtonATCreate.Image = CType(resources.GetObject("ButtonATCreate.Image"), System.Drawing.Image)
+        Me.ButtonATCreate.Label = "Create AT"
+        Me.ButtonATCreate.Name = "ButtonATCreate"
+        Me.ButtonATCreate.ScreenTip = "Create Activity Type"
+        Me.ButtonATCreate.ShowImage = True
         '
-        'ButtonCEChange
+        'ButtonATChange
         '
-        Me.ButtonCEChange.Image = CType(resources.GetObject("ButtonCEChange.Image"), System.Drawing.Image)
-        Me.ButtonCEChange.Label = "Change CE"
-        Me.ButtonCEChange.Name = "ButtonCEChange"
-        Me.ButtonCEChange.ScreenTip = "Change Cost Element"
-        Me.ButtonCEChange.ShowImage = True
+        Me.ButtonATChange.Image = CType(resources.GetObject("ButtonATChange.Image"), System.Drawing.Image)
+        Me.ButtonATChange.Label = "Change AT"
+        Me.ButtonATChange.Name = "ButtonATChange"
+        Me.ButtonATChange.ScreenTip = "Change Activity Type"
+        Me.ButtonATChange.ShowImage = True
         '
         'SapCoMdRibbon
         '
@@ -181,6 +202,8 @@
         Me.SapCoMd.PerformLayout()
         Me.SAPCostElement.ResumeLayout(False)
         Me.SAPCostElement.PerformLayout()
+        Me.SAPActivityType.ResumeLayout(False)
+        Me.SAPActivityType.PerformLayout()
         Me.SAPCostCenter.ResumeLayout(False)
         Me.SAPCostCenter.PerformLayout()
         Me.SAPGLAccount.ResumeLayout(False)
@@ -206,6 +229,8 @@
     Friend WithEvents ButtonGLAccCreate As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents ButtonCECreate As Microsoft.Office.Tools.Ribbon.RibbonButton
     Friend WithEvents ButtonCEChange As Microsoft.Office.Tools.Ribbon.RibbonButton
+    Friend WithEvents ButtonATCreate As Microsoft.Office.Tools.Ribbon.RibbonButton
+    Friend WithEvents ButtonATChange As Microsoft.Office.Tools.Ribbon.RibbonButton
 End Class
 
 Partial Class ThisRibbonCollection

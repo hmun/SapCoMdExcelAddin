@@ -132,4 +132,22 @@ Public Class SapCoMdRibbon
             MsgBox("Checking SAP-Connection failed!", MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Sap ButtonCEChange_Click")
         End If
     End Sub
+
+    Private Sub ButtonATCreate_Click(sender As Object, e As RibbonControlEventArgs) Handles ButtonATCreate.Click
+        Dim aSapCoMdRibbonAT As New SapCoMdRibbonAT
+        If checkCon() = True Then
+            aSapCoMdRibbonAT.exec(pSapCon:=aSapCon, pMode:="Create")
+        Else
+            MsgBox("Checking SAP-Connection failed!", MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Sap ButtonATCreate_Click")
+        End If
+    End Sub
+
+    Private Sub ButtonATChange_Click(sender As Object, e As RibbonControlEventArgs) Handles ButtonATChange.Click
+        Dim aSapCoMdRibbonAT As New SapCoMdRibbonAT
+        If checkCon() = True Then
+            aSapCoMdRibbonAT.exec(pSapCon:=aSapCon, pMode:="Change")
+        Else
+            MsgBox("Checking SAP-Connection failed!", MsgBoxStyle.OkOnly Or MsgBoxStyle.Critical, "Sap ButtonATChange_Click")
+        End If
+    End Sub
 End Class
